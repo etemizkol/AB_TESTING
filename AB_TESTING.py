@@ -53,12 +53,12 @@ df.groupby("smoker").agg({"total_bill":"mean"})
 # Proje Başladı
 
 # nihai başarı ölçütü Purchase sayısı
-control_group = pd.read_excel(r"D:\DATA SCIENCE\VAHİT BAŞKAN\5. Hafta\AB_TESTING_PROJECT\ab_testing_data.xlsx",sheet_name="Control Group")
+control_group = pd.read_excel("\ab_testing_data.xlsx",sheet_name="Control Group")
 control_group.head()
 col_list = ["Impression","Click","Purchase","Earning"]
 control_group = control_group[col_list]
 control_group.head()
-test_group = pd.read_excel(r"D:\DATA SCIENCE\VAHİT BAŞKAN\5. Hafta\AB_TESTING_PROJECT\ab_testing_data.xlsx",sheet_name="Test Group")
+test_group = pd.read_excel("\ab_testing_data.xlsx",sheet_name="Test Group")
 test_group = test_group[col_list]
 test_group.head()
 control_group.describe().T
